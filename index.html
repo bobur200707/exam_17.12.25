@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Tasks - SET B | Bobur Abdurahimov 4250</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1><i class="fas fa-code"></i> Web Development Tasks - SET B</h1>
+            <div class="student-info">
+                <div class="info-card">
+                    <i class="fas fa-user-graduate"></i>
+                    <div>
+                        <h3>Bobur Abdurahimov</h3>
+                        <p>Student ID: 4250</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-tasks"></i>
+                    <div>
+                        <h3>20 Tasks</h3>
+                        <p>Complete JavaScript Exercises</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container main-container">
+        <div class="instructions">
+            <h2><i class="fas fa-info-circle"></i> How to Use</h2>
+            <p>Enter the required information in each input field and click the button to see the result. Each task demonstrates a different JavaScript concept.</p>
+        </div>
+
+        <!-- Task 1 -->
+        <div class="task-card">
+            <div class="task-header">
+                <span class="task-number">Task 1</span>
+                <h3>Reverse words in a sentence</h3>
+            </div>
+            <p class="task-description">Enter a sentence below. Each word will be reversed in order.</p>
+            <div class="example">
+                <strong>Example:</strong> Input "Hello World JavaScript" → Output "JavaScript World Hello"
+            </div>
+            <div class="input-group">
+                <input type="text" id="task1-input" placeholder="Type a sentence here...">
+                <button onclick="task1()" class="btn-submit">
+                    <i class="fas fa-sync-alt"></i> Reverse Words
+                </button>
+            </div>
+            <div class="result-box">
+                <strong>Result:</strong> <span id="task1-result">Waiting for input...</span>
+            </div>
+        </div>
+
+        <!-- Task 2 -->
+        <div class="task-card">
+            <div class="task-header">
+                <span class="task-number">Task 2</span>
+                <h3>Extract first and last character</h3>
+            </div>
+            <p class="task-description">Enter any text string to see its first and last characters.</p>
+            <div class="example">
+                <strong>Example:</strong> Input "Programming" → Output "First: P, Last: g"
+            </div>
+            <div class="input-group">
+                <input type="text" id="task2-input" placeholder="Enter any text...">
+                <button onclick="task2()" class="btn-submit">
+                    <i class="fas fa-text-height"></i> Extract Characters
+                </button>
+            </div>
+            <div class="result-box">
+                <strong>Result:</strong> <span id="task2-result">Waiting for input...</span>
+            </div>
+        </div>
+
+        <!-- Task 3 -->
+        <div class="task-card">
+            <div class="task-header">
+                <span class="task-number">Task 3</span>
+                <h3>Find longest word in sentence</h3>
+            </div>
+            <p class="task-description">Enter a sentence to find the longest word in it.</p>
+            <div class="example">
+                <strong>Example:</strong> Input "The quick brown fox jumps" → Output "quick (5 letters)"
+            </div>
+            <div class="input-group">
+                <input type="text" id="task3-input" placeholder="Type a sentence...">
+                <button onclick="task3()" class="btn-submit">
+                    <i class="fas fa-search"></i> Find Longest Word
+                </button>
+            </div>
+            <div class="result-box">
+                <strong>Result:</strong> <span id="task3-result">Waiting for input...</span>
+            </div>
+        </div>
+
+        <!-- Task 4 -->
+        <div class="task-card">
+            <div class="task-header">
+                <span class="task-number">Task 4</span>
+                <h3>Convert to Title Case</h3>
+            </div>
+            <p class="task-description">Enter text to convert it to proper title case (first letter of each word uppercase).</p>
+            <div class="example">
+                <strong>Example:</strong> Input "web development course" → Output "Web Development Course"
+            </div>
+            <div class="input-group">
+                <input type="text" id="task4-input" placeholder="Enter text in lowercase...">
+                <button onclick="task4()" class="btn-submit">
+                    <i class="fas fa-text-case"></i> Convert to Title Case
+                </button>
+            </div>
+            <div class="result-box">
+                <strong>Result:</strong> <span id="task4-result">Waiting for input...</span>
+            </div>
+        </div>
+
+        <!-- Task 5 -->
+        <div class="task-card">
+            <div class="task-header">
+                <span class="task-number">Task 5</span>
+                <h3>Replace word in string</h3>
+            </div>
+            <p class="task-description">Enter original text, word to replace, and new word.</p>
+            <div class="example">
+                <strong>Example:</strong> Original: "I like apples", Replace: "apples" with "oranges" → Output: "I like oranges"
+            </div>
+            <div class="input-grid">
+                <input type="text" id="task5a-input" placeholder="Original text...">
+                <input type="text" id="task5b-input" placeholder="Word to replace...">
+                <input type="text" id="task5c-input" placeholder="New word...">
+            </div>
+            <button onclick="task5()" class="btn-submit full-width">
+                <i class="fas fa-exchange-alt"></i> Replace Word
+            </button>
+            <div class="result-box">
+                <strong>Result:</strong> <span id="task5-result">Waiting for input...</span>
+            </div>
+        </div>
+
+        <!-- Task 6 -->
+        <div class="task-card">
+            <div class="task-header">
+                <span class="task-number">Task 6</span>
+                <h3>Count vowels in string</h3>
+            </div>
+            <p class="task-description">Enter any text to count how many vowels (a, e, i, o, u) it contains.</p>
+            <div class="example">
+                <strong>Example:</strong> Input "Education" → Output "5 vowels"
+            </div>
+            <div class="input-group">
+                <input type="text" id="task6-input" placeholder="Enter text to count vowels...">
+                <button onclick="task6()" class="btn-submit">
+                    <i class="fas fa-calculator"></i> Count Vowels
+                </button>
+            </div>
+            <div class="result-box">
+                <strong>Result:</strong> <span id="task6-result">Waiting for input...</span>
+            </div>
+        </div>
+
+        <!-- Task 7 -->
+        <div class="task-card">
+            <div class="task-header">
+                <span class="task-number">Task 7</span>
+                <h3>Create array from input</h3>
+            </div>
+            <p class="task-description">Enter values separated by commas to create an array.</p>
+            <div class="example">
+                <strong>Example:</strong> Input "apple, banana, orange" → Output: Array: ["apple", "banana", "orange"]
+            </div>
+            <div class="input-group">
+                <input type="text" id="task7-input" placeholder="apple, banana, orange, grape">
+                <button onclick="task7()" class="btn-submit">
+                    <i class="fas fa-layer-group"></i> Create Array
+                </button>
+            </div>
+            <div class="result-box">
+                <strong>Result:</strong> <span id="task7-result">Waiting for input...</span>
+            </div>
+        </div>
+
+        <!-- Task 8 -->
+        <div class="task-card">
+            <div class="task-header">
+                <span class="task-number">Task 8</span>
+                <h3>Display third element from array</h3>
+            </div>
+            <p class="task-description">Click the button to show the third element of the array [10, 20, 30, 40, 50].</p>
+            <div class="example">
+                <strong>Example:</strong> Array: [10, 20, 30, 40, 50] → Third element: 30
+            </div>
+            <div class="centered">
+                <button onclick="task8()" class="btn-submit">
+                    <i class="fas fa-eye"></i> Show Third Element
+                </button>
+            </div>
+            <div class="result-box">
+                <strong>Result:</strong> <span id="task8-result">Click the button above</span>
+            </div>
+        </div>
+
+        <!-- Task 9 -->
+        <div class="task-card">
+            <div class="task-header">
+                <span class="task-number">Task 9</span>
+                <h3>Find index of element in array</h3>
+            </div>
+            <p class="task-description">Enter a number to find its position in the array [10, 20, 30, 40, 50].</p>
+            <div class="example">
+                <strong>Example:</strong> Input "30" → Output "Index: 2"
+            </div>
+            <div class="input-group">
+                <input type="number" id="task9-input" placeholder="Enter a number...">
+                <button onclick="task9()" class="btn-submit">
+                    <i class="fas fa-map-marker-alt"></i> Find Index
+                </button>
+            </div>
+            <div class="result-box">
+                <strong>Result:</strong> <span id="task9-result">Waiting for input...</span>
+            </div>
+        </div>
+
+        <!-- Task 10 -->
+        <div class="task-card">
+            <div class="task-header">
+                <span class="task-number">Task 10</span>
+                <h3>Check if number is even or odd</h3>
+            </div>
+            <p class="task-description">Enter any whole number to check if it's even or odd.</p>
+            <div class="example">
+                <strong>Example:</strong> Input "7" → Output "Odd", Input "12" → Output "Even"
+            </div>
+            <div class="input-group">
+                <input type="number" id="task10-input" placeholder="Enter a number...">
+                <button onclick="task10()" class="btn-submit">
+                    <i class="fas fa-divide"></i> Check Even/Odd
+                </button>
+            </div>
+            <div class="result-box">
+                <strong>Result:</strong> <span id="task10-result">Waiting for input...</span>
+            </div>
+        </div>
+
+        <!-- Task 11 -->
+        <div class="task-card">
+            <div class="task-header">
+                <span class="task-number">Task 11</span>
+                <h3>Sum of array values</h3>
+            </div>
+            <p class="task-description">Click to calculate the sum of all values in the array [10, 20, 30, 40, 50].</p>
+            <div class="example">
+                <strong>Example:</strong> Array: [10, 20, 30, 40, 50] → Sum: 150
+            </div>
+            <div class="centered">
+                <button onclick="task11()" class="btn-submit">
+                    <i class="fas fa-calculator"></i> Calculate Sum
+                </button>
+            </div>
+            <div class="result-box">
+                <strong>Result:</strong> <span id="task11-result">Click the button above</span>
+            </div>
+        </div>
+
+        <!-- Task 12 -->
+        <div class="task-card">
+            <div class="task-header">
+                <span class="task-number">Task 12</span>
+                <h3>Validate 10-digit input</h3>
+            </div>
+            <p class="task-description">Enter exactly 10 digits (numbers only, no spaces or other characters).</p>
+            <div class="example">
+                <strong>Example:</strong> Input "1234567890" → Output "Valid", Input "123" → Output "Invalid"
+            </div>
+            <div class="input-group">
+                <input type="text" id="task12-input" placeholder="Enter 10 digits...">
+                <button onclick="task12()" class="btn-submit">
+                    <i class="fas fa-check-circle"></i> Validate
+                </button>
+            </div>
+            <div class="result-box">
+                <strong>Result:</strong> <span id="task12-result">Waiting for input...</span>
+            </div>
+        </div>
+
+        <!-- Task 13 -->
+        <div class="task-card">
+            <div class="task-header">
+                <span class="task-number">Task 13</span>
+                <h3>Detect numeric vs string input</h3>
+            </div>
+            <p class="task-description">Enter either a number or text to detect the input type.</p>
+            <div class="example">
+                <strong>Example:</strong> Input "42" → Output "Number", Input "Hello" → Output "String"
+            </div>
+            <div class="input-group">
+                <input type="text" id="task13-input" placeholder="Enter number or text...">
+                <button onclick="task13()" class="btn-submit">
+                    <i class="fas fa-font"></i> Detect Type
+                </button>
+            </div>
+            <div class="result-box">
+                <strong>Result:</strong> <span id="task13-result">Waiting for input...</span>
+            </div>
+        </div>
+
+        <!-- Task 14 -->
+        <div class="task-card">
+            <div class="task-header">
+                <span class="task-number">Task 14</span>
+                <h3>Password length validation</h3>
+            </div>
+            <p class="task-description">Enter a password with at least 8 characters.</p>
+            <div class="example">
+                <strong>Example:</strong> Input "pass1234" → Output "Valid", Input "pass" → Output "Too short"
+            </div>
+            <div class="input-group">
+                <input type="password" id="task14-input" placeholder="Enter password...">
+                <button onclick="task14()" class="btn-submit">
+                    <i class="fas fa-lock"></i> Validate Password
+                </button>
+            </div>
+            <div class="result-box">
+                <strong>Result:</strong> <span id="task14-result">Waiting for input...</span>
+            </div>
+        </div>
+
+        <!-- Task 15 -->
+        <div class="task-card">
+            <div class="task-header">
+                <span class="task-number">Task 15</span>
+                <h3>Required field validation</h3>
+            </div>
+            <p class="task-description">Leave the field empty or enter text to test required field validation.</p>
+            <div class="example">
+                <strong>Example:</strong> Input "" → Output "Field is required", Input "Text" → Output "Valid"
+            </div>
+            <div class="input-group">
+                <input type="text" id="task15-input" placeholder="This field is required...">
+                <button onclick="task15()" class="btn-submit">
+                    <i class="fas fa-exclamation-circle"></i> Validate Field
+                </button>
+            </div>
+            <div class="result-box">
+                <strong>Result:</strong> <span id="task15-result">Waiting for input...</span>
+            </div>
+        </div>
+
+        <!-- Task 16 -->
+        <div class="task-card">
+            <div class="task-header">
+                <span class="task-number">Task 16</span>
+                <h3>Signup form</h3>
+            </div>
+            <p class="task-description">Fill the form and submit. Use reset to clear all fields.</p>
+            <div class="example">
+                <strong>Example:</strong> Fill all fields → Submit → Data saved
+            </div>
+            <div class="form-group">
+                <input type="text" id="name-input" placeholder="Your full name...">
+                <input type="email" id="email-input" placeholder="Your email address...">
+                <input type="password" id="pass-input" placeholder="Create password...">
+            </div>
+            <div class="button-group">
+                <button onclick="submitForm()" class="btn-submit">
+                    <i class="fas fa-paper-plane"></i> Submit Form
+                </button>
+                <button onclick="resetForm()" class="btn-reset">
+                    <i class="fas fa-redo"></i> Reset Form
+                </button>
+            </div>
+            <div class="result-box">
+                <strong>Result:</strong> <span id="task16-result">Fill the form and click Submit</span>
+            </div>
+        </div>
+
+        <!-- Task 17 -->
+        <div class="task-card">
+            <div class="task-header">
+                <span class="task-number">Task 17</span>
+                <h3>Display form data in table</h3>
+            </div>
+            <p class="task-description">Submitted form data will appear here in a table format.</p>
+            <div class="example">
+                <strong>Example:</strong> After submitting form, data appears in table below
+            </div>
+            <div id="task17-result" class="table-container">
+                <p>No form data submitted yet. Submit the form in Task 16 first.</p>
+            </div>
+        </div>
+
+        <!-- Task 18 -->
+        <div class="task-card">
+            <div class="task-header">
+                <span class="task-number">Task 18</span>
+                <h3>Display updated object</h3>
+            </div>
+            <p class="task-description">Click the button to update and display the object with current timestamp.</p>
+            <div class="example">
+                <strong>Example:</strong> Object updates with current time each click
+            </div>
+            <div class="centered">
+                <button onclick="task18()" class="btn-submit">
+                    <i class="fas fa-sync"></i> Update & Display Object
+                </button>
+            </div>
+            <div class="result-box">
+                <strong>Object:</strong> <span id="task18-result">Click the button above</span>
+            </div>
+        </div>
+
+        <!-- Task 19 -->
+        <div class="task-card">
+            <div class="task-header">
+                <span class="task-number">Task 19</span>
+                <h3>Countdown timer</h3>
+            </div>
+            <p class="task-description">60-second countdown timer with Start, Pause, and Reset controls.</p>
+            <div class="example">
+                <strong>Example:</strong> Click Start to begin countdown from 60 seconds
+            </div>
+            <div class="timer-container">
+                <div class="timer-display" id="timer-display">60</div>
+                <div class="timer-controls">
+                    <button onclick="startTimer()" class="btn-timer start">
+                        <i class="fas fa-play"></i> Start
+                    </button>
+                    <button onclick="pauseTimer()" class="btn-timer pause">
+                        <i class="fas fa-pause"></i> Pause
+                    </button>
+                    <button onclick="resetTimer()" class="btn-timer reset">
+                        <i class="fas fa-stop"></i> Reset
+                    </button>
+                </div>
+            </div>
+            <div class="result-box">
+                <strong>Status:</strong> <span id="task19-result">Timer ready (60 seconds)</span>
+            </div>
+        </div>
+
+        <!-- Task 20 -->
+        <div class="task-card">
+            <div class="task-header">
+                <span class="task-number">Task 20</span>
+                <h3>Hover event button</h3>
+            </div>
+            <p class="task-description">Hover your mouse over the button to see the hover effect.</p>
+            <div class="example">
+                <strong>Example:</strong> Button changes color and size on mouse hover
+            </div>
+            <div class="centered">
+                <button class="hover-button" id="hover-btn">
+                    <i class="fas fa-mouse-pointer"></i> Hover Over Me!
+                </button>
+            </div>
+            <div class="result-box">
+                <strong>Status:</strong> <span id="task20-result">Move mouse over the button above</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p><i class="fas fa-graduation-cap"></i> Bobur Abdurahimov | ID: 4250 | Web Development Tasks SET B</p>
+            <p>All 20 tasks completed with interactive examples</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
