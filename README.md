@@ -1,5 +1,5 @@
 # exam_17.12.25
-🚀 Web Basics Project
+🚀 Web link Basics Project - https://bobur200707.github.io/exam_17.12.25/
 👤 Bobur Abdurahimov | 🆔 4250
 
 📌 Quick Overview
@@ -91,4 +91,4 @@ Type: Lab Project
 
 Status: ✅ Complete
 
-
+https://bobur200707.github.io/exam_17.12.25/ https://bobur200707.github.io/exam_17.12.25/
